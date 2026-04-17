@@ -703,3 +703,6 @@ html {
   color: #00ffff;
   text-shadow: 0 0 8px #00ffff;
 }
+.back-to-top:focus {
+  outline: none;
+}
