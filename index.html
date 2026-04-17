@@ -17,7 +17,7 @@
     <div class="container nav-wrap">
       <a href="#hero" class="logo">ALIEN <span>POOL</span></a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      <button type="button" id="backToTopBtn" class="back-to-top">Voltar ao topo</button>
 
       <nav class="nav" id="mainNav">
         <a href="#hero">Início</a>
@@ -310,6 +310,20 @@
       </div>
     </div>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>
 
   <script src="js/main.js"></script>
   <script src="js/event.js"></script>
