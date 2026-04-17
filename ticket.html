@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu ingresso | Alien Pool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="panel ticket-panel">
+        <span class="section-tag secondary">Ingresso digital</span>
+        <h1 class="ticket-title">Alien Pool</h1>
+        <p class="ticket-subtitle">Apresente este ingresso no evento para validação.</p>
+
+        <div class="checkout-grid ticket-grid-page">
+          <div>
+            <div class="summary-line"><span>Nome</span><strong id="ticketBuyer">---</strong></div>
+            <div class="summary-line"><span>Ingresso</span><strong id="ticketType">---</strong></div>
+            <div class="summary-line"><span>Código</span><strong id="ticketCode">---</strong></div>
+            <div class="summary-line"><span>Status</span><strong id="ticketStatus">---</strong></div>
+          </div>
+
+          <div class="ticket-qr-wrap">
+            <img id="ticketQr" alt="QR Code do ingresso" class="ticket-qr-image" />
+            <small class="ticket-qr-note">QR Code único do ingresso</small>
+          </div>
+        </div>
+
+        <div class="hero-actions ticket-actions">
+          <a href="index.html" class="btn btn-secondary">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/ticket.js"></script>
+</body>
+</html>

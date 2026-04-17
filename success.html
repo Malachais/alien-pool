@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento aprovado | Alien Pool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="panel success-panel">
+        <span class="section-tag">Pagamento aprovado</span>
+        <h1 class="success-title">Tudo certo com sua compra</h1>
+        <p class="success-text">
+          Seu pagamento foi confirmado. Agora você já pode acessar os detalhes do seu ingresso.
+        </p>
+
+        <div class="summary-line success-order-line">
+          <span>Pedido</span>
+          <strong id="successOrderId">---</strong>
+        </div>
+
+        <div class="hero-actions success-actions">
+          <a href="ticket.html" id="openTicketBtn" class="btn btn-primary">Ver ingresso</a>
+          <a href="index.html" class="btn btn-secondary">Voltar ao início</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const orderId = params.get('orderId');
+    const ticketCode = params.get('ticketCode');
+
+    if (orderId) {
+      document.getElementById('successOrderId').textContent = orderId;
+    }
+
+    const openTicketBtn = document.getElementById('openTicketBtn');
+
+    if (ticketCode) {
+      openTicketBtn.href = `ticket.html?ticketCode=${encodeURIComponent(ticketCode)}`;
+    } else if (orderId) {
+      openTicketBtn.href = `ticket.html?orderId=${encodeURIComponent(orderId)}`;
+    }
+  </script>
+</body>
+</html>
