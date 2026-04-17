@@ -689,27 +689,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* RESET TOTAL DO BOTÃO */
 .back-to-top {
-  background: transparent;
-  border: none;
-  outline: none;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
   color: #00f0ff;
   cursor: pointer;
   font: inherit;
+
+  padding: 0;
+  margin: 0;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* REMOVE BORDA AO CLICAR */
+/* REMOVE QUALQUER ESTADO DO NAVEGADOR */
 .back-to-top:focus,
-.back-to-top:active {
-  outline: none;
-  box-shadow: none;
-  border: none;
+.back-to-top:active,
+.back-to-top:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* REMOVE HIGHLIGHT DO NAVEGADOR */
-.back-to-top::-moz-focus-inner {
+/* EDGE/CHROME FIX */
+button.back-to-top::-moz-focus-inner {
   border: 0;
 }
-.back-to-top {
-  -webkit-tap-highlight-color: transparent;
+
+/* FORÇA NÃO APARECER BORDA EM LINKS/FOCO GLOBAL */
+button {
+  outline: none;
 }
