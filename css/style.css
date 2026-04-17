@@ -691,9 +691,15 @@ html {
 
 .back-to-top {
   background: transparent;
-  border: 1px solid currentColor;
-  color: inherit;
+  border: none;
+  outline: none;
+  color: #00f0ff;
   cursor: pointer;
-  font: inherit;
-  padding: 0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
 }
