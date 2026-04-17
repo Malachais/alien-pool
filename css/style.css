@@ -688,3 +688,12 @@ textarea {
 html {
   scroll-behavior: smooth;
 }
+
+.back-to-top {
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}

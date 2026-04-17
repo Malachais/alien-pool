@@ -1,3 +1,4 @@
+// ================= MENU MOBILE =================
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -15,17 +16,18 @@ if (menuToggle && mainNav) {
   });
 }
 
-// Scroll suave + botão voltar ao topo funcionando
-document.querySelectorAll('a[href="#topo"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+// ================= BOTÃO VOLTAR AO TOPO =================
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
-});
+}
 
+// deixa global (pra funcionar no onclick do HTML)
+window.scrollToTop = scrollToTop;
+
+// ================= ANIMAÇÃO SCROLL =================
 const revealElements = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
