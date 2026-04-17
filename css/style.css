@@ -695,14 +695,21 @@ html {
   outline: none;
   color: #00f0ff;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
+  font: inherit;
 }
 
-.back-to-top:hover {
-  color: #00ffff;
-  text-shadow: 0 0 8px #00ffff;
-}
-.back-to-top:focus {
+/* REMOVE BORDA AO CLICAR */
+.back-to-top:focus,
+.back-to-top:active {
   outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* REMOVE HIGHLIGHT DO NAVEGADOR */
+.back-to-top::-moz-focus-inner {
+  border: 0;
+}
+.back-to-top {
+  -webkit-tap-highlight-color: transparent;
 }
