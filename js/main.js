@@ -15,6 +15,17 @@ if (menuToggle && mainNav) {
   });
 }
 
+// Scroll suave + botão voltar ao topo funcionando
+document.querySelectorAll('a[href="#topo"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+
 const revealElements = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {

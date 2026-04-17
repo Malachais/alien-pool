@@ -685,3 +685,6 @@ textarea {
     padding: 60px 0;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
